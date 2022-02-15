@@ -1,0 +1,211 @@
+n = int(input("enter the Number"))
+evenlist =[]
+oddlist =[]
+for i in range(0,n):
+    i = int(input("enter the number in list"))
+    if i%2==0:
+        evenlist.append(i)
+    else:
+        oddlist.append(i)
+
+print("Odd list",oddlist)
+print("Evenlist",evenlist)
+
+def evensum(evenlist):
+    sumeven =0
+    for i in evenlist:
+        sumeven=sumeven+i
+    print("evensum",sumeven)
+
+def oddsum(oddlist):
+    sumodd =0
+    for i in oddlist:
+        sumodd=sumodd+i
+    print("oddsum",sumodd)
+
+print(oddsum(oddlist),evensum(evenlist))
+
+
+
+    from ast import Num
+
+
+N = int(input("Enter th Number"))
+
+Numberlist = []
+
+
+for i in range(0,N):
+    i = int(input("Enter the Number you want"))
+    Numberlist.append(i)
+print(Numberlist)
+
+evenindexlist =[]
+oddindexlist =[]
+
+for i in range(0,len(Numberlist)):
+    if (i%2) == 0:
+        evenindexlist.append(i)
+    else:
+        oddindexlist.append(i)
+print(oddindexlist)
+print(evenindexlist)
+
+
+#FIND SUM OF ALL NUMBER IN LIST
+
+N = int(input("Enter Number"))
+
+list = []
+
+for i in range(0,N):
+    i = int(input("enter the nubmer"))
+    list.append(i)
+
+def int_list(list):
+    summ=1   
+    for n in list:
+        summ *= n
+        print(summ)
+print(int_list(list))
+print(list)
+
+
+
+
+
+
+
+# Finding THird second first larget Number in the list 
+
+def findLargest(arr):
+    secondLargest = arr[0]
+    largest = arr[0]
+    third = arr[0]
+    for i in range(len(arr)):
+        if arr[i] > largest:
+            largest = arr[i]
+    print(largest)
+ 
+    for i in range(len(arr)):
+        if arr[i] > secondLargest and arr[i] != largest:
+            secondLargest = arr[i]
+    print(secondLargest)
+    for i in range(len(arr)):
+        if arr[i] > third and arr[i] != secondLargest:
+            if arr[i]!= largest:
+                third = arr[i]
+ 
+    return third
+print(findLargest([12,20,40,50,49,34,100,90,80]))   
+
+
+
+
+Sort the Following program
+
+l= [34, 53, 64, 345, 6789,432,53,53,512,53,63,63,2,34]
+temp = [0]
+newlist = []
+for i in range(len(l)):
+    for j in range(i+1,len(l)): 
+        if l[i]>l[j]:
+            l[i],l[j] = l[j],l[i]
+            
+print(l)
+a = l[0:4]
+b= l[-1:-4]
+temp = l[0]
+temp = a
+a=b
+b=temp
+print(a)
+print(b)
+print(a+l[4:-4]+b)
+
+value = int(input("enter the value you want to find"))
+for i in range(len(l)):
+    if l[i] == value:
+        value = l[i]
+        print("value is there",value)
+        break
+else:
+    print("value not found",value)
+
+
+
+
+
+
+    
+    
+
+    #list = 32 42 523 52 12 53 53 12 53 
+    #       i[1]  i  i   i  i 
+
+
+
+
+
+
+
+
+
+
+#  COunr tOTAL NUMER IN THE 
+list = [1,3,5,1234567888888887654323456788888887654323456789]
+
+def findcount(list):
+    count = 0
+    for i in list:
+        count = count+1
+    print(count)
+
+print(findcount(list))
+
+
+
+
+
+#revers array Put start part to the end part#sort array asending and desending order
+#Print the array program
+import array as arr
+list = arr.array('i',[])
+io = int(input("enter the Number"))
+for i in range(io):
+    i = int(input("enter the number"))
+    list.append(i)
+
+for i in range(len(list)):
+    for j in range((i+1),len(list)):
+        if list[i] > list[j]:
+            list[i],list[j]=list[j],list[i]
+start =list[0:3]
+print(start)
+end = list[-4:-1]
+print(end)
+middle =list[3:-4]
+print(middle)
+New=[]
+New = end+middle+start
+print(New)
+print(list)
+
+#
+
+
+list1 = [11,22,43,33,52,23,52,55]
+#we need to find middle element in list
+
+count = len(list1)
+print(count)
+middle = count//2
+print("middled",middle)
+def findmiddle(count):
+   if count%2==0:
+      print("when even",list1[middle])
+   else:
+      print("when listodd",list1[middle])
+
+
+print(findmiddle(count))

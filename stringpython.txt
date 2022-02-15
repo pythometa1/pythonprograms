@@ -1,0 +1,241 @@
+#string problem
+
+def Reversestring(s):
+    words = s.split(' ')
+    Reverse =' '.join(reversed(words))
+    return Reverse
+s = input("Enter the String")
+
+print(Reversestring(s))
+
+
+
+
+#remove I th element form the string using slice function 0(n) complexity
+
+def removecharc(s,i):
+    a = s[0:i-1]
+    b =s[i:]
+    c = a+b
+    print(c)
+
+s = input("Input Enter:")
+i = int(input("Enter i th number"))
+
+print(removecharc(s,i))
+
+
+
+#Finding string in given program#
+
+
+s  = str(input("Enter the String:"))
+
+m = str(input("Enter the INput you want to find in database:"))
+
+#using Lower function and Find function 
+if s.lower().find(m.lower()) !=-1:
+    print("string found")
+else:
+    print("string not found")
+
+#Find the count of string in the program
+
+input_string = input("Enter the String ")
+
+input_Dict = {}
+
+for key in input_string.split():
+    input_Dict[key]=input_Dict.get(key,0)+1
+
+for key in sorted(input_Dict):
+    print("{} : {}".format(key,input_Dict[key]))
+
+
+
+
+#convert snake case to pascal case
+String_input = input("Enter the input")
+
+print("Normal string : ",String_input)
+
+pascal_string = String_input.replace("_","").title()
+pascal_string = pascal_string.replace(" ","")
+
+print(pascal_string)
+
+
+
+#string programm
+
+
+def checkvowel(s):
+    s = s.lower()
+    vowel = set("aeiou")
+    for i in s:
+        if i in vowel:
+            vowel.remove(i)
+    if len(vowel)==0:
+        print("accepted")
+    else:
+        print("Not accepted")
+
+s = input("enter the string that we need to check vower is in that or not")
+print(checkvowel(s))
+
+
+#write program to find least frequent chracter in string
+#algorithm for finding that one is
+#firstl take input string form user as well predefined
+String_input = input("Enter the String")
+Temp ={}
+
+def Checkfrequentcount(String_input):
+#crate Empty dictionary 
+#Itrate through inputed string using for loop
+    for i in String_input:
+        if i in Temp:
+
+            Temp[i]= Temp[i]+1
+        else:
+            Temp[i]=1
+        result = min(Temp, key = Temp.get)
+        print(result)
+#use min method for minimim value to find in dicotnary 
+
+print(Checkfrequentcount)
+
+2) second approch of the finding 
+
+from collections import Counter
+
+String_input = input("enter the string")
+
+def checkfreq(String_input):
+    result= Counter(String_input)
+    result = min(result, key = result.get)
+    print(result)
+
+
+
+#find Maximumcount form the following string 
+#Take input form user
+String_input=input("Enter the String : ")
+String_input.replace(" ","")
+print(String_input)
+#create Empty Dictonary
+Temp_Dict={}
+#create Funtion
+def MaxcountString(String_input):
+#define for loop and itrate one character by one through the string we defined
+    for i in String_input:
+
+#in inside of the for loop define another if loop that check if the i value repeted in for loop increate if loop counter
+        if i in Temp_Dict:
+            Temp_Dict[i] =Temp_Dict[i]+1
+#desing else block if that counter stood at one then condition goes to the else part
+        else:
+            Temp_Dict[i]=1
+#Stor result in variable perform max function operation with key paramenter and .get methond
+    result = max(Temp_Dict,key =Temp_Dict.get)
+#print the result now you can able to find the Number
+    print(result)
+
+
+print(MaxcountString(String_input))
+#
+
+checkfreq(String_input)
+
+
+
+
+#finding the special charcter in string if that found print error else accepted
+
+
+Input_String = input("Enter the Number:")
+
+def check(Input_String):
+    regex = ('!@$%^&*()<>?,./:''"{};[]\|')
+
+    for i in Input_String:
+        if i in regex = none:
+            print("Not accepted",Input_String)
+        else:
+            print("accetpted",Input_String)
+
+print(check(Input_String))
+
+
+
+usgin regex expression to finding the invalid string 
+import re
+Input_String = input("Enter the string that you want " )
+
+
+def regexcheck(Input_String):
+
+    if (bool(re.match('^[a-zA-Z0-9]*$',Input_String))==True):
+                print("Thank you for Entering string you are ready to go next step")
+
+    else:
+                print("string is not accepted due to invalid  character",Input_String)
+
+
+
+
+print(regexcheck(Input_String))
+
+
+
+# Python program to generate and match
+# the string from all random strings
+# of same length
+
+# Importing string, random
+# and time modules
+import string
+import random
+import time
+
+# all possible characters including
+# lowercase, uppercase and special symbols
+possibleCharacters = string.ascii_lowercase + string.digits +string.ascii_uppercase + ' ., !?;:'
+
+# string to be generated
+
+# To take input from user
+t = input(str("Enter your target text: "))
+
+attemptThis = ''.join(random.choice(possibleCharacters)for i in range(len(t)))
+attemptNext = ''
+
+completed = False
+iteration = 0
+
+# Iterate while completed is false
+while completed == False:
+	print(attemptThis)
+	
+	attemptNext = ''
+	completed = True
+	
+	# Fix the index if matches with
+	# the strings to be generated
+	for i in range(len(t)):
+		if attemptThis[i] != t[i]:
+			completed = False
+			attemptNext += random.choice(possibleCharacters)
+		else:
+			attemptNext += t[i]
+			
+	# increment the iteration
+	iteration += 1
+	attemptThis = attemptNext
+	time.sleep(0.1)
+
+# Driver Code
+print("Target matched after " +
+	str(iteration) + " iterations")
+
+

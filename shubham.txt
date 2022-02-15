@@ -1,0 +1,89 @@
+def Division(A,B):
+    Ans = A/B
+    return Ans
+
+def SmartDivision(shubh):
+    def Inner(a,b):
+        if a<b:
+            a,b=b,a
+        return shubh(a,b)
+    return Inner
+Division = SmartDivision(Division)
+
+def main():
+    no1 = 0
+    no2 = 0
+
+    no1 = int(input("enter the Number"))
+    no2 = int(input("enter the Number"))
+    print("Enter ter divids")
+
+    ret = Division(no1,no2)
+ 
+    print("Division is ",ret)
+    
+
+if __name__ =="__main__":
+    main()
+
+
+
+lower = int(input("en"))
+
+upper = int(input("en"))
+if lower<upper:
+    def prime(lower,upper):
+
+        for num in range(lower,upper+1):
+            if num>0:
+                for i in range(2,num):
+                    if(num%i) == 0:
+                     break
+                else:
+                    print(num)
+    print(prime(lower,upper))
+else:
+    print("Enter lower small and higher large ")
+
+
+
+num = int(input("enter the number"))
+if num>0:
+    def fact(num):
+        for i in range(num):
+        
+            
+            if num ==1:
+                return 1
+            else:
+                factorial = num *i
+        print(factorial)
+    print(fact(num))
+else:
+    print("enter correct")
+
+s = "aIbohPhoBiA"
+s = s.casefold()
+reverse = s[::-1]
+
+def palidron(s):
+    if list(s) == list(reverse):
+        print("ist palidron")
+    else:
+        print("not paldron")
+
+palidron(s)
+
+
+
+
+
+punction = '!@#$%^&*()_{}:''"<>?"'
+
+stringin = input("Enter")
+
+nopunct =""
+for char in stringin:
+    if char not in punction:
+        nopunct = nopunct+char
+print(nopunct)

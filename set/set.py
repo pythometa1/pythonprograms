@@ -5,6 +5,9 @@
 example ={"shubham","yelja;e","is"}
 print(type(example), example)
 
+
+#shubham
+
 #set is unorder so we can not predict in which order set will come
 #set Item are unorder,unchangeable , and not allowed duplicate value if it found duplicate value it should be remove automatically
 example = {"shubham","shubham","is"}
